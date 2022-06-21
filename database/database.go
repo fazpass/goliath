@@ -18,6 +18,8 @@ func Init(ctx context.Context, config Config) interface{} {
 		return InitMongoDB(ctx, config.Source)
 	case "redis":
 		return InitRedis(ctx, config.Host, config.Password, config.Db)
+	case "kafka":
+		return InitKafka([]string{config.Host})
 	default:
 		return nil
 	}
