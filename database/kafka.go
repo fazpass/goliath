@@ -7,7 +7,7 @@ import (
 	"github.com/Shopify/sarama"
 )
 
-func InitKafka(brokerList []string) sarama.AsyncProducer {
+func InitKafka(brokerList []string) *sarama.AsyncProducer {
 	var config = sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForLocal
 	config.Producer.Partitioner = sarama.NewRandomPartitioner
@@ -24,5 +24,5 @@ func InitKafka(brokerList []string) sarama.AsyncProducer {
 		}
 	}()
 
-	return producer
+	return &producer
 }
