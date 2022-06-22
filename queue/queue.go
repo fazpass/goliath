@@ -3,10 +3,8 @@ package queue
 import "context"
 
 type Config struct {
-	Driver   string
-	Source   string
-	Host     string
-	Password string
+	Driver string
+	Host   string
 }
 
 func Init(ctx context.Context, config Config) interface{} {
