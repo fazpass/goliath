@@ -1,4 +1,4 @@
-package database
+package queue
 
 import (
 	"log"
