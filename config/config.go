@@ -6,16 +6,16 @@ import (
 	"github.com/spf13/viper"
 )
 
-func InitConfig() {
+func Init() error {
 	var configFile = os.Getenv("APP_ENV_FILE")
 	if os.Getenv("APP_ENV_FILE") == "" {
 		configFile = ".env"
 	}
+
 	viper.SetConfigFile(configFile)
 	viper.AutomaticEnv()
 
-	err := viper.ReadInConfig()
-	if err != nil {
-		panic(err)
-	}
+	var err = viper.ReadInConfig()
+
+	return err
 }
