@@ -51,6 +51,7 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gofrs/uuid v4.2.0+incompatible
+	github.com/golang-jwt/jwt/v4 v4.4.2
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/klauspost/compress v1.15.6 // indirect
 	github.com/lib/pq v1.10.6
