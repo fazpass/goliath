@@ -1,4 +1,4 @@
-package queue
+package kafka
 
 import (
 	"github.com/Shopify/sarama"

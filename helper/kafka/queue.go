@@ -1,4 +1,4 @@
-package queue
+package kafka
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/Shopify/sarama"
-	helpermsg "github.com/fazpass/goliath/helper/queue/message"
+	helpermsg "github.com/fazpass/goliath/helper/kafka/message"
 )
 
 func Consume(client sarama.Consumer, topic string, group string, message chan []byte) {
