@@ -36,3 +36,14 @@ func InitKafkaConsumer(brokerList []string) *sarama.Consumer {
 
 	return &consumer
 }
+
+func InitKafkaConsumerGroup(brokerList []string, groupId string) *sarama.ConsumerGroup {
+	var config = sarama.NewConfig()
+	config.Consumer.Offsets.Initial = sarama.OffsetNewest
+	var consumer, err = sarama.NewConsumerGroup(brokerList, groupId, config)
+	if err != nil {
+		panic(err)
+	}
+
+	return &consumer
+}

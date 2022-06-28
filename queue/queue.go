@@ -3,9 +3,10 @@ package queue
 import "context"
 
 type Config struct {
-	Driver string
-	Host   string
-	Kind   string
+	Driver  string
+	Host    string
+	Kind    string
+	GroupId string
 }
 
 func Init(ctx context.Context, config Config) interface{} {
@@ -16,6 +17,8 @@ func Init(ctx context.Context, config Config) interface{} {
 			return InitKafkaProducer([]string{config.Host})
 		case "consumer":
 			return InitKafkaConsumer([]string{config.Host})
+		case "consumer_group":
+			return InitKafkaConsumerGroup([]string{config.Host}, config.GroupId)
 		default:
 			return nil
 		}
