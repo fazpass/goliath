@@ -3,7 +3,7 @@ package response
 import "net/http"
 
 type Response struct {
-	Status  bool        `json:"status,omitempty"`
+	Status  bool        `json:"status"`
 	Errors  interface{} `json:"errors,omitempty"`
 	Message string      `json:"message,omitempty"`
 	Code    string      `json:"code,omitempty"`
