@@ -10,12 +10,12 @@ func InitPostgresql(driver string, source string) (*sql.DB, error) {
 
 	var db, err = sql.Open(driver, source)
 	if err != nil {
-		return db, err
+		return nil, err
 	}
 
 	err = db.Ping()
 	if err != nil {
-		return db, nil
+		return nil, err
 	}
 
 	return db, nil

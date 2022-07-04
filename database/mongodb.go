@@ -11,7 +11,7 @@ func InitMongoDB(ctx context.Context, source string) (*mongo.Client, error) {
 
 	var client, err = mongo.Connect(ctx, options.Client().ApplyURI(source))
 	if err != nil {
-		return client, nil
+		return nil, err
 	}
 
 	return client, nil
