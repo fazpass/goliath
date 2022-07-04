@@ -22,6 +22,6 @@ func Init(ctx context.Context, config Config) (interface{}, error) {
 	case "redis":
 		return InitRedis(ctx, config.Host, config.Password, config.Db)
 	default:
-		return nil, errors.New("driver not found")
+		return nil, errors.New("database driver not found")
 	}
 }
