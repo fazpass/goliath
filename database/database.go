@@ -1,6 +1,9 @@
 package database
 
-import "context"
+import (
+	"context"
+	"errors"
+)
 
 type Config struct {
 	Driver   string
@@ -10,7 +13,7 @@ type Config struct {
 	Db       string
 }
 
-func Init(ctx context.Context, config Config) interface{} {
+func Init(ctx context.Context, config Config) (interface{}, error) {
 	switch config.Driver {
 	case "postgres":
 		return InitPostgresql(config.Driver, config.Source)
@@ -19,6 +22,6 @@ func Init(ctx context.Context, config Config) interface{} {
 	case "redis":
 		return InitRedis(ctx, config.Host, config.Password, config.Db)
 	default:
-		return nil
+		return nil, errors.New("database driver not found")
 	}
 }

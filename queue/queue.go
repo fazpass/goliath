@@ -1,6 +1,9 @@
 package queue
 
-import "context"
+import (
+	"context"
+	"errors"
+)
 
 type Config struct {
 	Driver  string
@@ -9,7 +12,7 @@ type Config struct {
 	GroupId string
 }
 
-func Init(ctx context.Context, config Config) interface{} {
+func Init(ctx context.Context, config Config) (interface{}, error) {
 	switch config.Driver {
 	case "kafka":
 		switch config.Kind {
@@ -20,9 +23,9 @@ func Init(ctx context.Context, config Config) interface{} {
 		case "consumer_group":
 			return InitKafkaConsumerGroup([]string{config.Host}, config.GroupId)
 		default:
-			return nil
+			return nil, errors.New("queue kind does not exists")
 		}
 	default:
-		return nil
+		return nil, errors.New("queue driver does not exists")
 	}
 }
