@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/Shopify/sarama"
-	helpermsg "github.com/fazpass/goliath/helper/kafka/message"
+	helpermsg "github.com/fazpass/goliath/v2/helper/kafka/message"
 )
 
 func Consume(client sarama.Consumer, topic string, group string, message chan []byte) {
