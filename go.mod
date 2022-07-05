@@ -1,4 +1,4 @@
-module github.com/fazpass/goliath
+module github.com/fazpass/goliath/v2
 
 go 1.17
 

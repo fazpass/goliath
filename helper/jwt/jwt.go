@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	helpertime "github.com/fazpass/goliath/helper/time"
+	helpertime "github.com/fazpass/goliath/v2/helper/time"
 	"github.com/golang-jwt/jwt/v4"
 )
 
