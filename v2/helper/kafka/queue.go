@@ -10,7 +10,7 @@ import (
 	helpermsg "github.com/fazpass/goliath/v2/helper/kafka/message"
 )
 
-func Consume(client sarama.Consumer, topic string, group string, message chan []byte) {
+func Consume(client sarama.Consumer, topic string, message chan []byte) {
 	var (
 		wg              sync.WaitGroup
 		partitions, err = client.Partitions(topic)
@@ -42,7 +42,7 @@ func Consume(client sarama.Consumer, topic string, group string, message chan []
 	client.Close()
 }
 
-func ConsumeGroup(ctx context.Context, client sarama.ConsumerGroup, topic string, group string, message chan []byte) {
+func ConsumeGroup(ctx context.Context, client sarama.ConsumerGroup, topic string, message chan []byte) {
 	var (
 		wg           sync.WaitGroup
 		err          error
