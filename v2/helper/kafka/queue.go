@@ -60,6 +60,7 @@ func ConsumeGroup(ctx context.Context, client sarama.ConsumerGroup, topic string
 			}
 
 			if ctx.Err() != nil {
+				log.Println(ctx.Err())
 				return
 			}
 
@@ -68,7 +69,7 @@ func ConsumeGroup(ctx context.Context, client sarama.ConsumerGroup, topic string
 	}()
 
 	<-groupHandler.ready
-	fmt.Println("Group consumer ready to consume message")
+	log.Println("Group consumer ready to consume message")
 
 	<-ctx.Done()
 	log.Println("terminating: context cancelled")
