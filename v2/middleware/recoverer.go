@@ -2,8 +2,6 @@ package middleware
 
 import (
 	"encoding/json"
-	"errors"
-	"fmt"
 	"net/http"
 	"runtime/debug"
 
@@ -34,8 +32,8 @@ func Recoverer(options RecovererOptions) func(http.Handler) http.Handler {
 					}
 
 					if options.Sentry {
-						errStr := fmt.Sprint(rvr)
-						sentry.CaptureException(errors.New(errStr))
+						err := rvr.(error)
+						sentry.CaptureException(err)
 					}
 
 					w = CreateResponse(w, options.Response.ContentType, options.Response.Status, options.Response.Body)
