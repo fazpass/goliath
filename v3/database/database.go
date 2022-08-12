@@ -13,7 +13,7 @@ type Config struct {
 	Host         string
 	Password     string
 	Db           string
-	MongoOptions options.ClientOptions
+	MongoOptions *options.ClientOptions
 }
 
 func Init(ctx context.Context, config Config) (interface{}, error) {
