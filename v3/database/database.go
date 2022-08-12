@@ -21,7 +21,7 @@ func Init(ctx context.Context, config Config) (interface{}, error) {
 	case "postgres":
 		return InitPostgresql(config.Driver, config.Source)
 	case "mongodb":
-		return InitMongoDB(ctx, &config.MongoOptions)
+		return InitMongoDB(ctx, config.MongoOptions)
 	case "redis":
 		return InitRedis(ctx, config.Host, config.Password, config.Db)
 	default:
