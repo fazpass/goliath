@@ -15,6 +15,7 @@
   - uuid
   - validator
 - logger
+- middleware
 - module
 - queue
 - router
