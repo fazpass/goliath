@@ -46,6 +46,7 @@ require (
 )
 
 require (
+	github.com/getsentry/sentry-go v0.13.0
 	github.com/go-chi/chi v1.5.4
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/go-redis/redis/v8 v8.11.5
