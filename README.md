@@ -21,6 +21,13 @@
 - router
 
 ## Installation
+
+### v2
 ```shell
 go get github.com/fazpass/goliath/v2
+```
+
+### v3
+```shell
+go get github.com/fazpass/goliath/v3
 ```
