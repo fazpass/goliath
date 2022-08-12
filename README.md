@@ -6,6 +6,7 @@
   - postgresql
   - mongodb
   - redis
+- exception
 - helper
   - http
   - jwt
