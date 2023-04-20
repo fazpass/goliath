@@ -34,6 +34,16 @@ func TestErrors(t *testing.T) {
 				"id": DefaultMessage,
 			},
 		},
+		{
+			desc: "unhappy path - get empty key",
+			messages: map[string]string{
+				"en": "Bad Request",
+			},
+			messagesExpected: map[string]string{
+				"en": "Bad Request",
+				"":   "Bad Request", // return first element in map
+			},
+		},
 	}
 
 	for _, s := range scenarios {
