@@ -26,6 +26,9 @@ func Validate(s interface{}) map[string]string {
 			structfField, _ = structType.FieldByName(e.Field())
 			field           = structfField.Tag.Get("json")
 		)
+		if field == "" {
+			field = e.Field()
+		}
 		errs[field] = GetMessage(field, e.ActualTag())
 	}
 
