@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/Shopify/sarama"
+	"github.com/IBM/sarama"
 )
 
 func InitKafkaProducer(brokerList []string) (*sarama.AsyncProducer, error) {
