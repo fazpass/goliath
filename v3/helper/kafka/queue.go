@@ -6,7 +6,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/Shopify/sarama"
+	"github.com/IBM/sarama"
 	helpermsg "github.com/fazpass/goliath/v3/helper/kafka/message"
 )
 
