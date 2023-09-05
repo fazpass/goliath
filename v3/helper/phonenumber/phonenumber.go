@@ -215,3 +215,7 @@ func GetCountryByPhoneNumber(phoneNumber string) (*Country, error) {
 
 	return nil, fmt.Errorf("phone number not recognized")
 }
+
+func GetAllCountries() []Country {
+	return countries
+}
