@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/IBM/sarama v1.41.0
+	github.com/go-chi/chi/v5 v5.0.12
 	github.com/stretchr/testify v1.8.4
 	go.mongodb.org/mongo-driver v1.9.1
 )
@@ -49,7 +50,6 @@ require (
 
 require (
 	github.com/getsentry/sentry-go v0.13.0
-	github.com/go-chi/chi v1.5.4
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-stack/stack v1.8.0 // indirect
