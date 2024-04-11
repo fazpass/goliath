@@ -5,8 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "v2" # See documentation for possible values
+    directory: "/v2" # Location of package manifests
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "v3" # See documentation for possible values
+    directory: "/v3" # Location of package manifests
     schedule:
       interval: "weekly"
       
