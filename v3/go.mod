@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/IBM/sarama v1.41.0
 	github.com/go-chi/chi/v5 v5.0.12
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	go.mongodb.org/mongo-driver v1.9.1
 )
 
