@@ -52,7 +52,7 @@ require (
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gofrs/uuid v4.2.0+incompatible
-	github.com/golang-jwt/jwt/v4 v4.4.2
+	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/klauspost/compress v1.15.6 // indirect
 	github.com/lib/pq v1.10.9
