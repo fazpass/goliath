@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/Shopify/sarama v1.34.1
 	github.com/go-chi/chi/v5 v5.0.12
-	go.mongodb.org/mongo-driver v1.14.0
+	go.mongodb.org/mongo-driver v1.15.0
 )
 
 require (
